@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+BE+VLG:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <title>Nitin Tony Paul</title>
+        <link rel="icon" type="image/png" href="userimage.png">
+        <script src="https://kit.fontawesome.com/618c64fdf6.js" crossorigin="anonymous"></script>
+        <meta name="view-transition" content="same-origin">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+    </head>
+    <body>
+        <!--Custom cursor-->
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            });
+        </script>
+
+        <!--Background effect-->
+        <div class="wrapper">
+            <canvas id="effectArea"></canvas>
+        </div>
+
+        <!--Header navigation-->
+        <header>
+
+            <!--Title Div-->
+            <div id="titleDiv">
+                <h1 id="Title"><a id="homeRedirect" href="index.html">NTP</a></h1>
+            </div>
+
+            <!--Navigation Div-->
+            <div id="navDiv">
+                <nav>
+                    <ul id="navList">
+                        <li id="aboutLi"><a href="about.html"id="AboutButton" class="navButton">About</a></li>
+                        <li id="skillsLi"><a  id="skillsButtonSkills" class="navButton">Skills</a></li>
+                        <li id="projectsLi"><a href="projects.html" id="projectsButton" class="navButton">Projects</a></li>
+                        <li id="resumeLi"><a href="https://www.google.com/" id="ResumeButton" class="navButton">Resume</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!--Skills display - MIGHT CHANGE-->
+        <div id="PapaDiv">
+            <div id="SkillsHeadingDiv"><h1 id="SkillsHeading">Skills</h1></div>
+            <section id="LogoSection">
+                <div id="logoDisplayDiv">
+                    <i id="Python-logo"class="fa-brands fa-python"></i>
+                    <i  id="JS-logo"class="fa-brands fa-js"></i><br>
+                    <i id="HTML-logo"class="fa-brands fa-html5"></i>
+                    <i id="CSS-logo"class="fa-brands fa-css3-alt"></i><br>
+                    <i id="Java-logo"class="fa-brands fa-java"></i>
+                    <i id="C-logo"class="fa-brands fa-cuttlefish"></i>
+                </div>
+                <section id="LogoExpl">
+                    <h1 id="skl1"class="SkillsExpl">I am Proficient in Python, C++ and Javascript for tackling various programming tasks</h1>
+                    <h1 id="skl2"class="SkillsExpl">I am also familiar with other languages such as Java, C, HTML, CSS, and MySQL/SQL.</h1>
+                    <h1 id="skl3"class="SkillsExpl">I am capable of writing Bash scripts and have solid experience in 3D development (Blender) and web design.</h1>
+                    <h1 id="skl4"class="SkillsExpl">Chess is another area where I am confident in my skills.</h1>
+                </section>
+            </section>
+        </div>
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>

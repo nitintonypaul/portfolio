@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+BE+VLG:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <title>Nitin Tony Paul</title>
+        <link rel="icon" type="image/png" href="userimage.png">
+        <meta name="view-transition" content="same-origin">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    </head>
+    <body>
+        <!--Custom cursor-->
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            });
+        </script>
+        <!--Background effect-->
+        <div class="wrapper">
+            <canvas id="effectArea"></canvas>
+        </div>
+
+        <!--Header navigation-->
+        <header>
+
+            <!--Title Div-->
+            <div id="titleDiv">
+                <h1 id="Title"><a id="homeRedirect" href="index.html">NTP</a></h1>
+            </div>
+
+            <!--Navigation Div-->
+            <div id="navDiv">
+                <nav>
+                    <ul id="navList">
+                        <li id="aboutLi"><a id="AboutButtonAbout" class="navButton">About</a></li>
+                        <li id="skillsLi"><a href="skills.html" id="skillsButton" class="navButton">Skills</a></li>
+                        <li id="projectsLi"><a href="projects.html" id="projectsButton" class="navButton">Projects</a></li>
+                        <li id="resumeLi"><a href="https://www.google.com/" id="ResumeButton" class="navButton">Resume</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!--About section-->
+        <section id="AboutSection">
+            <div id="aboutContent">
+                <h1 id="aboutHeading" class="aboutTexts">About</h1>
+                <p id="aboutPara" class="aboutTexts">My name is Nitin Tony Paul and I hail from the vibrant state of Kerala, India. I am an undergraduate computer science student at Vellore Institute of Technology, Chennai. Although I initially had no interest in programming, my passion for it was ignited during 11th grade. Since then, my love for programming and mathematics has only grown stronger. I am committed to learning new concepts and expanding my knowledge base. <br><br>  My well-disciplined nature allows me to approach problems methodically, while my creativity helps me devise unique solutions. This combination of discipline and creativity enhances my problem-solving abilities and drives successful outcomes.<br><br> On a lighter note, I also love pizza.</p>
+            </div>
+            <div id="plainEmpty"></div>
+        </section>
+    
+        <script src="script.js"></script>
+    </body>
+
+
+
+</html>

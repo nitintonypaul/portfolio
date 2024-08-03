@@ -1,0 +1,701 @@
+/*Hiding scrollbars*/
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    display: flex;
+    width: 100vw;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100vw;
+    margin: 0 0;
+    cursor: none;
+    overflow: hidden;
+}
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+::selection {
+    color: rgba(0, 0, 0, 0.9);
+    background-color: whitesmoke;
+}
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+@keyframes IntroFade {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+    
+}
+@keyframes IntroFadeMove {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+    from{transform: translateY(50px);}
+}
+
+#titleDiv {
+    display: flex;
+    float: left;
+    justify-content: flex-start;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+}
+#Title {
+    font-family: orbitron;
+    font-weight: 400;
+    color: white;
+    animation: IntroFade 2s;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid white;
+    border-radius: 5px;
+}
+#homeRedirect {
+    text-decoration: none;
+    color: white;
+    cursor: none;
+}
+
+/*Media sizes*/
+@media (hover: none) {
+    .cursor {
+        width: 0px;
+        height: 0px;
+    }
+}
+@media only screen and  (max-width: 610px) {
+    #Title {
+        font-size: 25px;
+    }
+    #AboutButton, #skillsButton, #projectsButton, #ResumeButton, #AboutButtonAbout, #skillsButtonSkills, #projectsButtonprojects {
+        font-size: 14px;
+    }
+    body {
+        overflow-x:hidden;
+    }
+    
+}
+@media only screen and  (max-width: 485px) {
+    #Title {
+        font-size: 20px;
+    }
+    #AboutButton, #skillsButton, #projectsButton, #ResumeButton, #AboutButtonAbout, #skillsButtonSkills, #projectsButtonprojects {
+        font-size: 10px;
+    }
+}
+@media only screen and  (max-width: 415px) {
+    #Title {
+        font-size: 18px;
+    }
+    #AboutButton, #skillsButton, #projectsButton, #ResumeButton, #AboutButtonAbout, #skillsButtonSkills, #projectsButtonprojects {
+        font-size: 8px;
+    }
+}
+
+
+/*Navigation bar*/
+.navButton {
+    font-family: quicksand;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 15px;
+    margin-right: 15px;
+    padding-bottom: 1px;
+    border: solid transparent;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+#navList {
+    display: flex;
+    list-style-type: none;
+    float: none;
+    padding: 0;
+}
+
+#navDiv {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+/*About Button*/
+#AboutButton {
+    animation: IntroFadeMove 2s;
+    cursor: none;
+}
+#AboutButton:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px transparent solid;
+    border-radius: 10px;
+    cursor: none;
+    mix-blend-mode: difference;
+}
+#AboutButtonAbout {
+    animation: IntroFadeMove 2s;
+    background-color: white;
+    color: black;
+    mix-blend-mode: difference;
+}
+
+/*Skills Button*/
+@keyframes skills {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+    from{transform: translateY(300px);}
+}
+#skillsButton {
+    animation: IntroFadeMove 2.5s;
+    cursor: none;
+}
+#skillsButton:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px transparent solid;
+    border-radius: 10px;
+    cursor: none;
+    mix-blend-mode: difference;
+}
+#skillsButtonSkills {
+    animation: IntroFadeMove 2.5s;
+    background-color: white;
+    color: black;
+    mix-blend-mode: difference;
+}
+#SkillsHeading {
+    font-family: quicksand;
+    color: white;
+    font-weight: 600;
+    font-size: 140px;
+    animation: tempAnime 2.5s;
+    writing-mode: vertical-lr;
+    margin-left: 0px;
+    margin-right: 0px;
+    mix-blend-mode: difference;
+}
+#SkillsHeadingDiv {
+    display: flex;
+    position: relative;
+    left: 10px;
+    text-align: center;
+
+}
+#PapaDiv {
+    display: flex;
+}
+#Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+    color: white;
+    padding-left: 60px;
+    padding-top: 40px;
+    font-size: 80px;
+    mix-blend-mode: difference;
+}
+#Python-logo:hover, #C-logo:hover, #JS-logo:hover, #HTML-logo:hover, #CSS-logo:hover, #Java-logo:hover  {
+    color: rgba(255,255,255,0.7);
+    transition: 0.4s;
+    transform: translateY(-5px);
+}
+@keyframes logoDrop {
+    from{transform: translateY(-1000px);}
+}
+#Python-logo {
+    animation: logoDrop 3s;
+}
+#JS-logo {
+    animation: logoDrop 3.5s;
+}
+#HTML-logo{
+    animation: logoDrop 4s;
+}
+#CSS-logo {
+    animation: logoDrop 4.5s;
+}
+#Java-logo {
+    animation: logoDrop 5s;
+}
+#C-logo {
+    animation: logoDrop 5.5s;
+}
+#logoDisplayDiv {
+    text-align: center;
+    display: flex;
+}
+/*Projects Button*/
+#projectsButton {
+    animation: IntroFadeMove 3s;
+    cursor: none;
+}
+#projectsButton:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px transparent solid;
+    border-radius: 10px;
+    cursor: none;
+    mix-blend-mode: difference;
+}
+#projectsButtonprojects {
+    animation: IntroFadeMove 3s;
+    background-color: white;
+    color: black;
+    mix-blend-mode: difference;
+}
+
+/*Resume Button*/
+#ResumeButton {
+    animation: IntroFadeMove 3.5s;
+    cursor: none;
+}
+#ResumeButton:hover {
+    transition: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px transparent solid;
+    border-radius: 10px;
+    cursor: none;
+    mix-blend-mode: difference;
+}
+
+/*Temporary*/
+#TempDiv {
+    display: grid;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+#Temp {
+    font-family: quicksand;
+    color: white;
+    font-weight: 500;
+    font-size: 100px;
+    animation: tempAnim 4s;
+    mix-blend-mode: difference;
+}
+@keyframes tempAnim {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+    from{transform: translateY(300px);}
+}
+@keyframes tempAnime {
+    from{transform: translateY(3000px);}
+}
+@media (max-width: 1070px) {
+    #Temp {
+        font-size: 80px;
+    }
+}
+@media (max-width: 870px) {
+    #Temp {
+        font-size: 60px;
+    }
+}
+@media (max-width: 660px) {
+    #Temp {
+        font-size: 40px;
+    }
+}
+@media (max-width: 420px) {
+    #Temp {
+        font-size: 30px;
+    }
+}
+
+#Decor {
+    font-family: quicksand;
+    color: white;
+    font-weight: 600;
+    font-size: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 0;
+    animation: tempAnime 2.5s;
+    writing-mode: vertical-lr;
+    mix-blend-mode: difference;
+}
+#DecorDiv {
+    display: flex;
+}
+#intro {
+    font-family: quicksand;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    padding-top: 100px;
+    padding-right: 10px;
+    padding-left: 30px;
+    width: 100vw;
+}
+.introMessage {
+    padding-bottom: 5px;
+    width: 100vw;
+}
+#intro1 {
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 40px;
+    animation: IntroFade 1s;
+}
+#intro2 {
+    font-weight: 500;
+    animation: introductionAnimation 3.5s;
+}
+#intro3 {
+    font-weight: 500;
+    animation: introductionAnimation 4s;
+}
+#intro4 {
+    font-weight: 500;
+    animation: introductionAnimation 4.5s;
+}
+
+@keyframes introductionAnimation {
+    from{transform: translateX(1000px);}
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#Name {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+#Name:hover {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration-color: white;
+    cursor: none;
+}
+#progBtn, #projBtn, #colabBtn {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+#progBtn:hover, #projBtn:hover, #colabBtn:hover {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration-color: white;
+    transition-duration: 0.2s;
+    cursor: none;
+}
+@keyframes decorMove {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
+}
+
+#linkCon, #mailCon, #gitCon {
+    color: white;
+    font-size: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    animation: IntroFade 7s;
+    mix-blend-mode: difference;
+}
+#linkCon:hover, #mailCon:hover, #gitCon:hover {
+    color: rgba(255, 255, 255, 0.7);
+    transition-duration: 0.2s;
+    cursor: none;
+    mix-blend-mode: difference;
+}
+
+#contactDiv {
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: right;
+    bottom: 10px;
+}
+
+canvas {
+    display: block;
+}
+.wrapper {
+    position: absolute;
+    z-index: -1;
+}
+
+/*About Page design*/
+.aboutTexts {
+    font-family: quicksand;
+    color: white;
+    font-weight: 500;
+}
+#aboutHeading {
+    font-size: 130px;
+    font-weight: 600;
+    animation: tempAnime 2.5s;
+    mix-blend-mode: difference;
+    writing-mode: vertical-rl;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+#aboutPara {
+    padding-top: 30px;
+    font-size: 18px;
+    animation: introductionAnimation 3s;
+}
+
+#aboutContent {
+    width: 100vw;
+    padding-left: 20px;
+    padding-right: 0px;
+    margin: 0 0;
+    display: flex;
+}
+#AboutSection {
+    display: flex;
+}
+
+#logoExpl {
+    margin-top: 100px;
+    padding-top: 100px;
+    display: flexbox;
+}
+.SkillsExpl {
+    color: white;
+    font-family: quicksand;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+#skl1 {
+    animation: introductionAnimation 3s;
+}
+#skl2 {
+    padding-top: 5px;
+    animation: introductionAnimation 3.5s;
+}
+#skl3 {
+    padding-top: 5px;
+    animation: introductionAnimation 4s;
+}
+#skl4 {
+    padding-top: 5px;
+    animation: introductionAnimation 4.5s;
+}
+
+
+/*Media queries*/
+/*
+@media only screen and (max-width:2561px) {
+    #intro1 {
+        font-size: 80px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 200%;
+    }
+    #Decor {
+        font-size:300px;
+        padding-top: 30px;
+    }
+    #linkCon, #mailCon, #gitCon {
+        font-size: 300%;
+    }
+    #contactDiv {
+        margin-top: -20px;
+    }
+    #Title {
+        font-size: 50px;
+    }
+    .navButton {
+        font-size: 30px;
+    }
+}
+@media (max-width:1440px) and (min-width:1025px) {
+    #intro1 {
+        font-size: 50px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 125%;
+    }
+    #Decor {
+        font-size:160px;
+        padding-top: 10px;
+    }
+    #linkCon, #mailCon, #gitCon {
+        font-size: 200%;
+    }
+    #contactDiv {
+        margin-top: -20px;
+    }
+}*/
+@media only screen and (max-width:768px) {
+    #intro1 {
+        font-size: 30px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 75%;
+    }
+    #Decor {
+        font-size: 110px;
+        padding-top: 10px;
+    }
+    #linkCon, #mailCon, #gitCon {
+        font-size: 130%;
+    }
+}
+@media only screen and (max-width:426px) {
+    #intro1 {
+        font-size: 20px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 50%;
+    }
+    #Decor {
+        font-size: 80px;
+        padding-top: 30px;
+    }
+    #contactDiv {
+        padding-top: 20px;
+        font-size: 90%;
+    }
+}
+@media only screen and (max-width:376px) {
+    #intro1 {
+        font-size: 20px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 42%;
+    }
+    #Decor {
+        font-size: 70px;
+        padding-top: 50px;
+    }
+    #contactDiv {
+        padding-top: 20px;
+        font-size: 70%;
+    }
+}
+
+/*
+@media (max-width: 2561px) {
+    #aboutHeading {
+        font-size: 300px;
+    }
+    #aboutPara {
+        font-size: 50px;
+    }
+}
+@media (max-width: 1440px) {
+    #aboutHeading {
+        font-size: 160px;
+    }
+    #aboutPara {
+        font-size: 23px;
+    }
+}*/
+@media (max-width: 768px) {
+    #aboutHeading {
+        font-size: 100px;
+    }
+    #aboutPara {
+        font-size: 14px;
+    }
+}
+@media (max-width: 426px){
+    #aboutHeading {
+        font-size: 80px;
+    }
+    #aboutPara {
+        font-size: 11px;
+    }
+}
+@media (max-width: 426px){
+    #aboutHeading {
+        font-size: 70px;
+        padding-top: 50px;
+    }
+    #aboutPara {
+        font-size: 10px;
+    }
+}
+
+/*
+@media (max-width: 2561px) {
+    #SkillsHeading {
+        font-size: 300px;
+    }
+    #Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        font-size: 1000%;
+        padding-left: 180px;
+    }
+    .SkillsExpl {
+        font-size: 50px;
+    }
+}
+@media (max-width: 1440px) {
+    #SkillsHeading {
+        font-size: 160px;
+    }
+    #Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        font-size: 500%;
+    }
+    .SkillsExpl {
+        font-size: 23px;
+    }
+}*/
+@media (max-width: 768px) {
+    #SkillsHeading {
+        font-size: 100px;
+    }
+    #Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        font-size: 300%;
+    }
+    .SkillsExpl {
+        font-size: 14px;
+    }
+}
+@media (max-width: 426px) {
+    #SkillsHeading {
+        font-size: 70px;
+    }
+    #Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        font-size: 110%;
+        padding-left: 50px;
+    }
+    #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        padding-left: 25px;
+    }
+    .SkillsExpl {
+        font-size: 10px;
+    }
+}
+

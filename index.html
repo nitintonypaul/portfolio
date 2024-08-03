@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Orbitron:wght@400..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+BE+VLG:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <title>Nitin Tony Paul</title>
+        <link rel="icon" type="image/png" href="userimage.png">
+        <script src="https://kit.fontawesome.com/618c64fdf6.js" crossorigin="anonymous"></script>
+        <meta name="view-transition" content="same-origin">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+    </head>
+    <body>
+        <!--Custom cursor-->
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.pageX + 'px';
+                cursor.style.top = e.pageY + 'px';
+            });
+        </script>
+
+        <!--Background effect-->
+        <div class="wrapper">
+            <canvas id="effectArea"></canvas>
+        </div>
+        
+        <!--Header navigation-->
+        <header>
+
+            <!--Title Div-->
+            <div id="titleDiv">
+                <h1 id="Title"><a id="homeRedirect">NTP</a></h1>
+            </div>
+
+            <!--Navigation Div-->
+            <div id="navDiv">
+                <nav>
+                    <ul id="navList">
+                        <li id="aboutLi"><a href="about.html"id="AboutButton" class="navButton">About</a></li>
+                        <li id="skillsLi"><a href="skills.html" id="skillsButton" class="navButton">Skills</a></li>
+                        <li id="projectsLi"><a href="projects.html" id="projectsButton" class="navButton">Projects</a></li>
+                        <li id="resumeLi"><a href="https://www.google.com/" id="ResumeButton" class="navButton">Resume</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--Main content-->
+        <main>
+            <div id="DecorDiv">
+
+                <!--Hello decoration-->
+                <h1 id="Decor">Hello!</h1>
+
+                <!--Introduction-->
+                <section id="intro">
+                    <div id="introDiv">
+                        <h1 class="introMessage" id="intro1">I am <a id="Name" href="about.html">Nitin Tony Paul</a>.</h1>
+                        <h3 class="introMessage" id="intro2">I am a disciplined and creative individual exploring new opportunities.</h3>
+                        <h3 class="introMessage" id="intro2">I have a passion for <a id="progBtn" href="skills.html">programming</a>, mathematics and learning in general.</h3>
+                        <h3 class="introMessage" id="intro3">I love working on <a href="projects.html" id="projBtn">projects</a> and <a id="colabBtn" href="">collaborating</a> with like-minded people.</h3>
+                        <h3 class="introMessage" id="intro4">I appreciate you dropping by.</h3>
+                    </div>
+                </section>
+            </div>
+
+            <!--Contacts section-->
+            <div id="contactDiv">
+                <a id="linkCon" href="https://www.linkedin.com/in/nitintonypaul/"><i class="fa-brands fa-linkedin"></i></a>
+                <a id="mailCon" href="mailto:nitinpaul157@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a id="gitCon" href="https://github.com/nitintonypaul"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
