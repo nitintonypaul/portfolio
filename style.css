@@ -358,7 +358,6 @@ html {
 }
 .introMessage {
     padding-bottom: 5px;
-    width: 100vw;
 }
 #intro1 {
     font-weight: 500;
@@ -538,8 +537,8 @@ canvas {
     .navButton {
         font-size: 30px;
     }
-}
-@media (max-width:1440px) and (min-width:1025px) {
+}*/
+@media (min-width: 1440px) {
     #intro1 {
         font-size: 50px;
     }
@@ -556,7 +555,25 @@ canvas {
     #contactDiv {
         margin-top: -20px;
     }
-}*/
+}
+@media (max-width: 1025px) {
+    #intro1 {
+        font-size: 20px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 75%;
+    }
+    #Decor {
+        font-size:110px;
+        padding-top: 10px;
+    }
+    #linkCon, #mailCon, #gitCon {
+        font-size: 150%;
+    }
+    #contactDiv {
+        margin-top: -20px;
+    }
+}
 @media only screen and (max-width:768px) {
     #intro1 {
         font-size: 30px;
@@ -577,7 +594,7 @@ canvas {
         font-size: 20px;
     }
     #intro2, #intro3, #intro4 {
-        font-size: 50%;
+        font-size: 14px;
     }
     #Decor {
         font-size: 80px;
@@ -593,7 +610,7 @@ canvas {
         font-size: 20px;
     }
     #intro2, #intro3, #intro4 {
-        font-size: 42%;
+        font-size: 12px;
     }
     #Decor {
         font-size: 70px;
@@ -602,6 +619,22 @@ canvas {
     #contactDiv {
         padding-top: 20px;
         font-size: 70%;
+    }
+}
+@media only screen and (max-width:321px) {
+    #intro1 {
+        font-size: 15px;
+    }
+    #intro2, #intro3, #intro4 {
+        font-size: 10px;
+    }
+    #Decor {
+        font-size: 40px;
+        padding-top: 50px;
+    }
+    #contactDiv {
+        padding-top: 30px;
+        font-size: 50%;
     }
 }
 
@@ -613,15 +646,23 @@ canvas {
     #aboutPara {
         font-size: 50px;
     }
-}
-@media (max-width: 1440px) {
+}*/
+@media (min-width: 1440px) {
     #aboutHeading {
         font-size: 160px;
     }
     #aboutPara {
         font-size: 23px;
     }
-}*/
+}
+@media (max-width: 1025px) {
+    #aboutHeading {
+        font-size: 110px;
+    }
+    #aboutPara {
+        font-size: 15px;
+    }
+}
 @media (max-width: 768px) {
     #aboutHeading {
         font-size: 100px;
@@ -638,7 +679,7 @@ canvas {
         font-size: 11px;
     }
 }
-@media (max-width: 426px){
+@media (max-width: 376px){
     #aboutHeading {
         font-size: 70px;
         padding-top: 50px;
@@ -647,9 +688,18 @@ canvas {
         font-size: 10px;
     }
 }
+@media (max-width: 321px){
+    #aboutHeading {
+        font-size: 40px;
+        padding-top: 50px;
+    }
+    #aboutPara {
+        font-size: 10px;
+    }
+}
 
 /*
-@media (max-width: 2561px) {
+@media (min-width: 2560px) {
     #SkillsHeading {
         font-size: 300px;
     }
@@ -660,8 +710,8 @@ canvas {
     .SkillsExpl {
         font-size: 50px;
     }
-}
-@media (max-width: 1440px) {
+}*/
+@media (min-width: 1440px) {
     #SkillsHeading {
         font-size: 160px;
     }
@@ -671,7 +721,18 @@ canvas {
     .SkillsExpl {
         font-size: 23px;
     }
-}*/
+}
+@media (max-width: 1025px) {
+    #SkillsHeading {
+        font-size: 110px;
+    }
+    #Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        font-size: 300%;
+    }
+    .SkillsExpl {
+        font-size: 15px;
+    }
+}
 @media (max-width: 768px) {
     #SkillsHeading {
         font-size: 100px;
@@ -693,6 +754,21 @@ canvas {
     }
     #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
         padding-left: 25px;
+    }
+    .SkillsExpl {
+        font-size: 10px;
+    }
+}
+@media (max-width: 321px) {
+    #SkillsHeading {
+        font-size: 40px;
+    }
+    #Python-logo, #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        font-size: 100%;
+        padding-left: 50px;
+    }
+    #C-logo, #JS-logo, #HTML-logo, #CSS-logo, #Java-logo {
+        padding-left: 20px;
     }
     .SkillsExpl {
         font-size: 10px;
