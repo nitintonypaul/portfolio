@@ -513,31 +513,6 @@ canvas {
 
 
 /*Media queries*/
-/*
-@media only screen and (max-width:2561px) {
-    #intro1 {
-        font-size: 80px;
-    }
-    #intro2, #intro3, #intro4 {
-        font-size: 200%;
-    }
-    #Decor {
-        font-size:300px;
-        padding-top: 30px;
-    }
-    #linkCon, #mailCon, #gitCon {
-        font-size: 300%;
-    }
-    #contactDiv {
-        margin-top: -20px;
-    }
-    #Title {
-        font-size: 50px;
-    }
-    .navButton {
-        font-size: 30px;
-    }
-}*/
 @media (min-width: 1440px) {
     #intro1 {
         font-size: 50px;
