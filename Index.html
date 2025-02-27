@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Head-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitin Tony Paul</title>
+    <link rel="icon" type="image/x-icon" href="terminal.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <!--Fontawesome Embed-->
+    <script src="https://kit.fontawesome.com/395e50903c.js" crossorigin="anonymous"></script>
+
+    <!--Google Fonts Embed-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<!--Body-->
+<body>
+
+    <!--Canvas for star effect-->
+    <div class="wrapper">
+        <canvas id="effectArea"></canvas>
+    </div>
+
+    <div id="fade-effect"></div>
+
+    <div id="parentDiv">
+
+        <!--Text-->
+        <div id="textDiv">
+
+            <!--Heading-->
+            <div id="heading"><h1 id="headingText">  
+                <span id="changing-word">Greetings!</span>
+                <br>I am Nitin Tony Paul.<br></h1>
+            </div>
+
+            <!--Subtexts-->
+            <div id="paragraphs">
+                <h1 id="first" class="subtext">
+                    Born in 2005, Nitin Tony Paul is an engineering student at Model Engineering College with interests in programming, business, designing, writing and tennis. There's more to his journey, take a closer look <a id="resume" class="linkText" href="resume.pdf">here</a>.
+                <br>
+                <br>
+                </h1>
+
+                <h1 id="second" class="subtext">
+                    Proficient in Python, JavaScript, C and C++, he is expanding his knowledge in Java and frameworks. He enjoys coding small <a id="projects" class="linkText" href="https://github.com/nitintonypaul?tab=repositories">projects</a> and is experienced in Blender and photo editing.
+                <br>
+                <br>
+                </h1>
+
+                <h1 id="third" class="subtext">
+                    For inquiries, feel free to 
+                    <button id="reach" class="subtext" onclick="appear()">
+                        reach out
+                    </button>.
+                </h1>
+            </div>
+        </div>
+
+        <!--Socials-->
+        <div id="socialsDiv" style="display: none;">
+           <a class="socials" href="https://www.instagram.com/nitinp_l/"><i class="fa-brands fa-instagram"></i></a>
+           <a class="socials" href="https://www.linkedin.com/in/nitintonypaul"><i class="fa-brands fa-linkedin"></i></a>
+           <a class="socials" href="https://github.com/nitintonypaul"><i class="fa-brands fa-github"></i></a>
+           <a class="socials" href="mailto:nitintonypaul@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+    </div>
+
+    <!--Script for Star effect-->
+    <script>
+        //Stars
+        //Recognising elements
+        const canvas = document.getElementById('effectArea');
+        const ctx = canvas.getContext('2d');
+
+        //Setting Environment Length
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        //Assigning stars
+        const stars = [];
+
+        //Initiating stars
+        function initiateStars() {
+            for (let i = 0; i < 500; i++) {
+                stars.push({
+                    x: Math.random()*canvas.width,
+                    y: Math.random()*canvas.height,
+                    radius: Math.random()*1.5,
+                    speed: Math.random()*0.2
+                });
+            }
+        }
+
+        //Drawing stars
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            for (const star of stars) {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI*2);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                ctx.closePath();
+            
+                star.x += star.speed;
+            
+            
+                if (star.x > canvas.width) {
+                    star.x = 0;
+                }
+            }
+        
+            requestAnimationFrame(drawStars);
+        }
+
+        //Calling functions
+        initiateStars();
+        drawStars();
+    </script>
+</body>
+
+</html>

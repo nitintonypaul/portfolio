@@ -1,0 +1,203 @@
+/*A few touch-ups*/
+::selection {
+    color: black;
+    background: #d3d3d3;
+}
+::-moz-selection { 
+    color: black;
+    background: #d3d3d3;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*Animations*/
+@keyframes quickfade {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes motionfade {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(0%);}
+}
+
+@keyframes fade-effect {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/*Designs*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    margin: 0;
+    top: 0;
+}
+.wrapper {
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    top: 0;
+}
+#fade-effect {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: -1;
+    opacity: 0;
+    animation: fade-effect 6s;
+}
+
+#textDiv {
+    margin: 10% 15%;
+    width: 40vw;
+
+}
+
+#heading {
+    padding-bottom: 30px;
+}
+#headingText {
+    font-family: Noto Sans;
+    font-weight: 500;
+    font-size: 2.5rem;
+    animation: motionfade 1s;
+}
+
+.subtext {
+    font-family: Noto Sans Mono;
+    font-weight: 350;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+#reach {
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 0;
+    margin: 0 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: color 0.1s;
+    padding-bottom: 2px;
+}
+#reach:hover {
+    color: #d3d3d3;
+}
+
+#first {
+    animation: quickfade 1.5s;
+}
+
+#second {
+    animation: quickfade 2s;
+}
+
+#third {
+    animation: quickfade 2.5s;
+}
+
+.linkText {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    color: white;
+    transition: color 0.1s;
+    padding-bottom: 2px;
+}
+.linkText:hover {
+    color: #d3d3d3;
+}
+
+#changing-word {
+    display: inline-block;
+    height: 20px;
+}
+
+#socialsDiv {
+    margin: 0 15%;
+    width: 40vw;
+    z-index: 2;
+}
+.socials {
+    color: white;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    transition: color 0.1s;
+    border-radius: 100px;
+}
+.socials:hover {
+    color: #d3d3d3;
+}
+
+/*Resizing*/
+@media only screen and (max-width: 800px) {
+    #textDiv {
+        width: 70vw;
+    }
+    .socials {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #textDiv {
+        width: 70vw;
+    }
+    #headingText {
+        font-size: 2rem;
+    }
+    .subtext {
+        font-size: 0.9rem;
+    }
+    #socialsDiv {
+        margin: 20% 15%;
+    }
+
+}
+
+@media only screen and (max-width: 330px) {
+    #headingText {
+        font-size: 1.5rem;
+    }
+    .subtext {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    #socialsDiv {
+        margin: 0% 15%;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    #textDiv {
+        margin: 5% 15%;
+    }
+}
