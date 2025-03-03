@@ -148,11 +148,36 @@ canvas {
     color: white;
     padding: 0px 10px;
     font-size: 1.5rem;
-    transition: color 0.1s;
     border-radius: 100px;
 }
-.socials:hover {
-    color: #d3d3d3;
+
+/*Different Social icons*/
+.fa-instagram {
+    transition: color 0.2s;
+}
+.fa-instagram:hover {
+    color: #E1306C;
+}
+
+.fa-linkedin {
+    transition: color 0.2s;
+}
+.fa-linkedin:hover {
+    color: #0077B5;
+}
+
+.fa-github {
+    transition: color 0.2s;
+}
+.fa-github:hover {
+    color: #a1a1a1;
+}
+
+.fa-envelope {
+    transition: color 0.2s;
+}
+.fa-envelope:hover {
+    color: #c71610 ;
 }
 
 /*Resizing*/
