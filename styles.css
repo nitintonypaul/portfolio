@@ -188,6 +188,9 @@ canvas {
     .subtext {
         font-size: 0.7rem;
     }
+    body {
+        overflow-y: scroll;
+    }
 }
 
 @media only screen and (max-height: 720px) {
