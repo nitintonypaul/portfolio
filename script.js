@@ -2,22 +2,30 @@ const words = ["Greetings!", "Grüße!", "नमस्ते!","നമസ്ക�
 let index = 0;
 
 setInterval(() => {
-    index = (index + 1) % words.length;
-    document.getElementById("changing-word").textContent = words[index];
+    const changingText = document.getElementById("changing-word")
+    
+    changingText.style.opacity = 0
 
+    setTimeout(() => {
+        index = (index + 1) % words.length;
 
-    if (words[index] === "നമസ്കാരം!") {
-        document.getElementById("changing-word").style.fontFamily = "Noto Sans Malayalam";
-    } else {
-        document.getElementById("changing-word").style.fontFamily = "Noto Sans";
-    }
+        if (words[index] === "നമസ്കാരം!") {
+            changingText.style.fontFamily = "Noto Sans Malayalam";
+        } else {
+            changingText.style.fontFamily = "Noto Sans";
+        }
+
+        changingText.textContent = words[index];
+        changingText.style.opacity = 1
+
+    }, 300)
   }, 3000);
 
 function appear () {
-    if (document.getElementById("socialsDiv").style.display == "none") {
-        document.getElementById("socialsDiv").style.display = "flex";
+    if (document.getElementById("socialsDiv").style.opacity == 0) {
+        document.getElementById("socialsDiv").style.opacity = 1;
     } else {
-        document.getElementById("socialsDiv").style.display = "none";
+        document.getElementById("socialsDiv").style.opacity = 0;
     }
 }
 
