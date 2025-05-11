@@ -1,11 +1,11 @@
 /*A few touch-ups*/
 ::selection {
-    color: black;
-    background: #d3d3d3;
+    color: #6EACDA;
+    background: transparent;
 }
 ::-moz-selection { 
-    color: black;
-    background: #d3d3d3;
+    color: #6EACDA;
+    background: transparent;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -56,12 +56,14 @@ canvas {
     margin: 0;
     top: 0;
 }
+
 .wrapper {
     z-index: -1;
     position: absolute;
     margin: 0;
     top: 0;
 }
+
 #fade-effect {
     height: 100vh;
     width: 100vw;
@@ -83,6 +85,7 @@ canvas {
 #heading {
     padding-bottom: 30px;
 }
+
 #headingText {
     font-family: Noto Sans;
     font-weight: 500;
@@ -91,11 +94,12 @@ canvas {
 }
 
 .subtext {
-    font-family: Noto Sans Mono;
-    font-weight: 350;
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.5px;
 }
+
 #reach {
     color: white;
     background-color: transparent;
@@ -103,12 +107,13 @@ canvas {
     cursor: pointer;
     padding: 0 0;
     margin: 0 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
     transition: color 0.1s;
     padding-bottom: 2px;
 }
+
 #reach:hover {
-    color: #d3d3d3;
+    color: #6EACDA;
 }
 
 #first {
@@ -125,14 +130,14 @@ canvas {
 
 /*Link Texts*/
 .linkText {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
     transition: color 0.1s;
     padding-bottom: 2px;
 }
+
 .linkText:hover {
-    color: #d3d3d3;
+    color: #6EACDA;
 }
 
 /*Changing Word animation*/
