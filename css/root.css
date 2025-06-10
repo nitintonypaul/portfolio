@@ -1,0 +1,6 @@
+/*Variables and font-faces for Styling*/
+:root {
+    --primary-color: #000;
+    --text-color: #fff;
+    --pseudo-border-opacity: 1;
+}

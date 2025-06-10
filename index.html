@@ -1,131 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--Head-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nitin Tony Paul</title>
-    <link rel="icon" type="image/x-icon" href="terminal.ico">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 
-    <!--Fontawesome Embed-->
-    <script src="https://kit.fontawesome.com/395e50903c.js" crossorigin="anonymous"></script>
+    <!--Stylesheets-->
+    <link href="css/root.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
 
-    <!--Google Fonts Embed-->
+    <!--Favicon-->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+Malayalam:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
 </head>
-
-<!--Body-->
 <body>
 
-    <!--Canvas for star effect-->
-    <div class="wrapper">
-        <canvas id="effectArea"></canvas>
-    </div>
+    <!--Loading Screen-->
+    <div class="loader" id="loader">
 
-    <div id="fade-effect"></div>
+        <!--SVG container-->
+        <div class="svg-loader-container">
 
-    <div id="parentDiv">
-
-        <!--Text-->
-        <div id="textDiv">
-
-            <!--Heading-->
-            <div id="heading"><h1 id="headingText">  
-                <span id="changing-word">Greetings!</span>
-                <br>I am Nitin Tony Paul.<br></h1>
-            </div>
-
-            <!--Subtexts-->
-            <div id="paragraphs">
-                <h1 id="first" class="subtext">
-                    Born in 2005, Nitin Tony Paul is an engineering student at Model Engineering College with interests in programming, business, designing, writing and tennis. Take a closer look at his journey <a id="resume" class="linkText" href="resume.pdf" target="_blank">here</a>.
-                <br>
-                <br>
-                </h1>
-
-                <h1 id="second" class="subtext">
-                    Proficient in Python, JavaScript, C, and C++, he is now taking an interest in quantum computing and cryptography. He enjoys developing small <a id="projects" class="linkText" href="https://github.com/nitintonypaul?tab=repositories" target="_blank">projects</a> and has experience with Blender and photo editing.
-                <br>
-                <br>
-                </h1>
-
-                <h1 id="third" class="subtext">
-                    For inquiries, feel free to 
-                    <button id="reach" class="subtext" onclick="appear()">
-                        reach out
-                    </button>.
-                </h1>
-            </div>
-        </div>
-
-        <!--Socials-->
-        <div id="socialsDiv" class="socialsDiv">
-           <a class="socials" href="https://www.instagram.com/nitinp_l/"><i class="fa-brands fa-instagram"></i></a>
-           <a class="socials" href="https://www.linkedin.com/in/nitintonypaul"><i class="fa-brands fa-linkedin"></i></a>
-           <a class="socials" href="https://github.com/nitintonypaul"><i class="fa-brands fa-github"></i></a>
-           <a class="socials" href="mailto:nitintonypaul@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            <!--SVG element-->
+            <svg class="svg-n" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xml:space="preserve">
+              <path id="svg-n-path" fill="#FFF" d="M108.445 428.664c11.985-5.208 16.381-14.968 17.512-26.754.366-3.807.41-7.656.41-11.485.022-76.156.046-152.313-.095-228.469-.005-2.927-1.064-6.209-2.614-8.72-14.086-22.815-34.747-34.054-61.49-34.284-.993-.008-1.984-.13-3.346-.224-.084-1.503-.195-2.96-.24-4.42-.04-1.299-.009-2.6-.009-4.312h4.773c29.33 0 58.66-.065 87.987.13 2.249.014 5.16 1.272 6.63 2.946 67.634 76.957 135.142 154.024 202.664 231.078l9.44 10.773c.25-1.964.525-3.125.526-4.286.018-64.658.046-129.316-.05-193.974-.008-5.3-.46-10.675-1.425-15.882-2.418-13.058-9.143-19.304-22.464-20.802-7.913-.89-15.905-1.083-24.249-1.614v-8.114H444.47v8.754c-6.342 0-12.634-.237-18.9.071-5.457.268-10.899 1.045-16.32 1.788-7.694 1.054-12.713 5.922-13.953 13.088-1.75 10.11-2.89 20.461-2.913 30.712-.213 91.988-.124 183.975-.123 275.963v5.75c-4.466 1.23-7.152-.044-9.938-3.19-75.992-85.81-152.1-171.516-228.193-257.235-1.81-2.038-3.684-4.02-6.305-6.873v5.956c0 66.158-.027 132.315.045 198.473.006 5.977.235 12.01 1.066 17.92 2.825 20.091 12.89 29.547 33.074 31.558 4.603.458 9.212.857 13.97 1.297v8.269H76.33V435.4c10.527-2.168 21.155-4.357 32.114-6.736"/>
+            </svg>
+        
         </div>
 
     </div>
-
-    <!--Script for Star effect-->
-    <script>
-        //Stars
-        //Recognising elements
-        const canvas = document.getElementById('effectArea');
-        const ctx = canvas.getContext('2d');
-
-        //Setting Environment Length
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        //Assigning stars
-        const stars = [];
-
-        //Initiating stars
-        function initiateStars() {
-            for (let i = 0; i < 500; i++) {
-                stars.push({
-                    x: Math.random()*canvas.width,
-                    y: Math.random()*canvas.height,
-                    radius: Math.random()*1.5,
-                    speed: Math.random()*0.2
-                });
-            }
-        }
-
-        //Drawing stars
-        function drawStars() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    <!--Display navbar-->
+    <header id="navigation-bar">
         
-            for (const star of stars) {
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, Math.PI*2);
-                ctx.fillStyle = 'white';
-                ctx.fill();
-                ctx.closePath();
+        <nav>
             
-                star.x += star.speed;
-            
-            
-                if (star.x > canvas.width) {
-                    star.x = 0;
-                }
-            }
-        
-            requestAnimationFrame(drawStars);
-        }
+            <!--Logo System-->
+            <div class="logo-container" id="logo-container">
+                N
+            </div>
 
-        //Calling functions
-        initiateStars();
-        drawStars();
-    </script>
+            <!--Navbar Button-->
+            <div class="navbar-btn" id="navbar-btn">
+                <span class="line" id="line-1"></span>
+                <span class="line" id="line-2"></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--Menu Div-->
+    <section class="menu-section" id="menu-section">
+
+        <!--Parent-->
+        <div class="menu-div-p">
+
+            <!--Child-->
+            <div class="menu-div-j">
+
+                <!--Elements-->
+                <a class="element" href="#about-section">
+                    About
+                </a>
+
+                <a class="element" href="#section-sep-wrk">
+                    Works
+                </a>
+
+                <a class="element" href="#contact-section">
+                    Contact
+                </a>
+
+                <a class="element" href="assets/resume.pdf" target="_blank">
+                    Resume
+                </a>
+
+            </div>
+        </div>
+    </section>
+    
+    <!--Landing Page section-->
+    <section id="landing-section" class="landing-section">
+
+        <!--Empty divs for border effect-->
+        <div class="empty-div" id="empty-div-1"></div>
+        <div class="empty-div" id="empty-div-2"></div>
+        <div class="empty-div" id="empty-div-3"></div>
+        <div class="empty-div" id="empty-div-4"></div>
+        <div class="empty-div" id="empty-div-6"></div>
+        <div class="empty-div" id="empty-div-7"></div>
+        <div class="empty-div" id="empty-div-8"></div>
+
+        <!--Name display div-->
+        <div class="name-div" id="name-div">
+
+            <div id="name">
+                Nitin Tony Paul
+            </div>
+
+        </div>
+
+        <!--Brief Note section-->
+        <div class="brief-desc" id="brief-desc">
+
+            <div class="desc">
+
+                <div id="desc-short">
+                    A computer science student with a love for quantitative finance.
+                </div>
+
+            </div>
+
+            <div class="empty-div" id="empty-div-5"></div>
+
+        </div>
+    </section>
+
+    <!--Section Separation For ABOUT-->
+    <div class="section-sep" id="section-sep-abt">
+
+        <!--Empty divs for border effect-->
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+
+    </div>
+
+    <!--About Section-->
+    <section class="about-section" id="about-section">
+
+        <!--Empty divs for border effect-->
+        <div class="empty-div" id="empty-div-9"></div>
+        <div class="empty-div" id="empty-div-10"></div>
+        <div class="empty-div" id="empty-div-11"></div>
+        <div class="empty-div" id="empty-div-12"></div>
+        <div class="empty-div" id="empty-div-13"></div>
+        <div class="empty-div" id="empty-div-14"></div>
+
+        <!--About Heading-->
+        <div class="about-heading-div" id="about-heading-div">
+
+            <div id="about-heading">
+                <div>About</div>
+            </div>
+
+        </div>
+
+        <!--About description with GRID structure-->
+        <div class="about-desc-div" id="about-desc-div">
+
+            <div class="about-desc" id="about-desc-1">
+                I am a Computer Science student at Model Engineering College, driven by a deep passion for quantitative finance. I apply my CS foundation to explore complex financial problems, with a particular interest in portfolio optimization and volatility-based strategies.
+            </div>
+
+            <div class="about-desc" id="about-desc-2">
+                My core expertise is in Python and C++, which I use to implement and backtest investment theories, analyze risk-return trade-offs, and model volatility dynamics. My technical skill set also includes C, HTML/CSS and JavaScript.
+            </div>
+
+            <div class="about-desc" id="about-desc-3">
+                I am actively seeking roles in quantitative research or strategy development where I can apply my analytical skills to build and refine robust investment portfolios.
+            </div>
+            
+        </div>
+
+        <!--Empty div with black bg-->
+        <div class="empty-div" id="empty-div-15"></div>
+        
+    </section>
+
+    <!--Section Separation For WORKS-->
+    <div class="section-sep" id="section-sep-wrk">
+
+        <!--Empty divs for border effect-->
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+
+    </div>
+
+    <!--Section for works-->
+    <section class="work-section" id="work-section">
+        
+        <!--Big Div-->
+        <div class="work-div">
+
+            <!--Empty Divs-->
+            <div class="empty-div" id="empty-div-16"></div>
+            <div class="empty-div" id="empty-div-17"></div>
+            <div class="empty-div" id="empty-div-18"></div>
+            <div class="empty-div" id="empty-div-19"></div>
+            <div class="empty-div" id="empty-div-20"></div>
+            <div class="empty-div" id="empty-div-21"></div>
+            <div class="empty-div" id="empty-div-22"></div>
+            <div class="empty-div" id="empty-div-23"></div>
+
+            <!--Work heading-->
+            <div class="work-heading-div">
+                <div class="work-heading">
+                    Works
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Sub-section but named as a div-->
+    <!--works-->
+    <div class="works" id="works-1">
+        <div class="work" id="work-1">
+            <div class="work-title-area">
+                <a href="https://github.com/nitintonypaul/egarch-jdm-optimizer" target="_blank">
+                    EGARCH-JDM based Portfolio Optimizer
+                </a>
+            </div>
+            <div class="work-desc-area">Portfolio optimizer Implementing Mean-Variance Optimization with volatility from an EGARCH(1,1) model and asset prices simulated via a Merton Jump Diffusion process. Built fully from scratch in C++ and Python using yfinance & NumPy.</div>
+        </div>
+    </div>
+
+    <div class="works" id="works-2">
+        <div class="work" id="work-2">
+            <div class="work-title-area">
+                <a href="https://github.com/nitintonypaul/garch" target="_blank">
+                    GARCH(1,1) with Gradient Ascent
+                </a>
+            </div>
+            <div class="work-desc-area">Generalized AutoRegressive Conditional Heteroskedasticity (1,1). Built from scratch.</div>
+        </div>
+    </div>
+
+    <div class="works" id="works-3" style="height: 70vh;">
+        <div class="work" id="work-3">
+            <div class="work-title-area">
+                <a href="https://numa-extension.vercel.app/" target="_blank">
+                    NUMA
+                </a>
+            </div>
+            <div class="work-desc-area">A sleek and minimal new-tab Chrome extension designed to eliminate distractions and enhance focus. Developed using HTML, CSS and JavaScript. Open-source and distributed via GitHub and Gumroad.</div>
+        </div>
+    </div>
+
+    <!--Shadow div to combat premature unpinning-->
+    <div class="shadow-div"></div>
+
+    <!--Section Separation For CONTACT-->
+    <div class="section-sep" id="section-sep-cntct">
+
+        <!--Empty divs for border effect-->
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+        <div class="empty-div"></div>
+
+    </div>
+
+    <section class="contact-section" id="contact-section">
+        <!--Empty Divs for border effect-->
+        <div class="empty-div" id="empty-div-24"></div>
+        <div class="empty-div" id="empty-div-25"></div>
+        <div class="empty-div" id="empty-div-26"></div>
+        <div class="empty-div" id="empty-div-27"></div>
+        <div class="empty-div" id="empty-div-28"></div>
+        <div class="empty-div" id="empty-div-29"></div>
+        <div class="empty-div" id="empty-div-30"></div>
+
+        <!--Contacts Heading-->
+        <div class="contact-heading-div">
+            <div class="contact-heading">
+                Contact
+            </div>
+        </div>
+
+        <!--Contact Socials-->
+        <div class="contacts-div">
+            <div class="socials">
+                <div class="social">
+                    <a href="https://linkedin.com/in/nitintonypaul" target="_blank">
+                        LinkedIn *
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="https://github.com/nitintonypaul" target="_blank">
+                        GitHub *
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="mailto:nitintonypaul@gmail.com">
+                        Gmail *
+                    </a>
+                </div>
+                <div class="social">
+                    <a href="assets/resume.pdf" target="_blank">
+                        Resume *
+                    </a>
+                </div>
+            </div>
+
+            <!--Copyright Statement-->
+            <div class="copyright">
+                © 2025 Nitin Tony Paul. All rights reserved.
+            </div>
+        </div>
+
+    </section>
+
+    <!--GSAP-->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!--Scripts-->
+    <script src="js/loader.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/utils.js"></script>
 </body>
-
 </html>

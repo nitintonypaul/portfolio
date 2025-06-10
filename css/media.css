@@ -1,0 +1,155 @@
+/*For medium screens*/
+@media screen and (max-width: 440px) {
+    .menu-div-j > a {
+        font-size: 5rem;
+    }
+
+    .landing-section {
+        grid-template-rows: 14fr 2fr 1fr;
+    }
+
+    .name-div {
+        font-size: 2.8rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .about-heading-div {
+        font-size: 7rem;
+    }
+
+    .about-desc-div {
+        font-size: 1rem;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .work-heading-div {
+        font-size: 7rem;
+    }
+
+    .work-title-area {
+        font-size: 1.2rem;
+    }
+
+    .work-desc-area {
+        font-size: 0.8rem;
+    }
+
+    .contact-heading {
+        font-size: 6rem;
+    }
+
+    .social {
+        font-size: 1rem;
+    }
+
+    .copyright {
+        font-size: 0.6rem;
+    }
+}
+
+/*For small screens*/
+@media screen and (max-width: 380px) {
+    .menu-div-j > a {
+        font-size: 5rem;
+    }
+
+    .landing-section {
+        grid-template-rows: 14fr 2fr 2fr;
+    }
+
+    .name-div {
+        font-size: 2.4rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .about-heading-div {
+        font-size: 6rem;
+    }
+
+    .about-desc-div {
+        font-size: 1rem;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .work-heading-div {
+        font-size: 6rem;
+    }
+
+    .work-title-area {
+        font-size: 1.2rem;
+    }
+
+    .work-desc-area {
+        font-size: 0.8rem;
+    }
+
+    .contact-heading {
+        font-size: 5rem;
+    }
+
+    .social {
+        font-size: 0.9rem;
+    }
+
+    .copyright {
+        font-size: 0.5rem;
+    }
+}
+
+/*For very small screens*/
+@media screen and (max-width: 330px) {
+    .menu-div-j > a {
+        font-size: 4rem;
+    }
+
+    .landing-section {
+        grid-template-rows: 14fr 2fr 1fr;
+    }
+
+    .name-div {
+        font-size: 2rem;
+    }
+
+    .desc {
+        font-size: 0.7rem;
+    }
+
+    .about-heading-div {
+        font-size: 5rem;
+    }
+
+    .about-desc-div {
+        font-size: 0.8rem;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .work-heading-div {
+        font-size: 5rem;
+    }
+
+    .work-title-area {
+        font-size: 1rem;
+    }
+
+    .work-desc-area {
+        font-size: 0.7rem;
+    }
+
+    .contact-heading {
+        font-size: 4rem;
+    }
+
+    .social {
+        font-size: 0.8rem;
+    }
+
+    .copyright {
+        font-size: 0.5rem;
+    }
+}
