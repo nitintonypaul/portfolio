@@ -1,6 +1,6 @@
 /*Styles for loading div*/
 .loader {
-    position: absolute;
+    position: fixed;
     display: grid;
     min-height: 100vh;
     width: 100vw;
