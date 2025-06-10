@@ -164,7 +164,7 @@ nav {
     display: flex;
     justify-content: left;
     align-items: center;
-    font-size: 11vw;
+    font-size: 9rem;
     overflow: hidden;
     box-sizing: border-box;
 }
